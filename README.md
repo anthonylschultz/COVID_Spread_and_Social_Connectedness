@@ -11,10 +11,10 @@
 6) Hypothesis Testing
 7) Conclusions and Next Steps
 
----
+
 
 ## Project Objective
----
+
 
 
 
@@ -23,7 +23,6 @@
 ### Technologies 
 
 ## Project Description
----
+
 
 ## Contact
----
