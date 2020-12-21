@@ -4,4 +4,4 @@ data/
 
 *.key
 
-.ipynb_checkpoints/*
+.ipynb_checkpoints/
