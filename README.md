@@ -68,7 +68,7 @@ With a p-value less than the selected significance level of 0.05, I failed to re
 
 
 ## Analysis
-### Why Might Higher Connected Countiese Have Fewer Infections per Capita?
+### Why Might Higher Connected Counties Have Fewer Infections per Capita?
 1) **We're too late in the pandemic to rely on social networks as disease vectors.** COVID-19 is far too widespread now to suggest that an individual's social network could help predict the direction of the disease. As of December 2020, we aree well past the point where an individual's personal connections are the main vector of disease spread. Analogous to this is the fact that contact tracing is essentially useless with the exception of smaller isolated settings like university campuses.
 2) **Demographic differences exist in higher connecteed counties** Research has demonstrated that higher connected counties, especially when connected to counties that are more than 100 miles away, have higher levels of income, education, and social mobility. It's also possible that such factors influence political and cultural leanings and therefore the degree to which individuals adhere to COVID-19 restrictions. 
 
