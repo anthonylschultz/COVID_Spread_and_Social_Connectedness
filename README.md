@@ -1,75 +1,70 @@
 # Social Connectedness and COVID-19 Spread
 
-#### Project Status: [Completed]
+#### **Project Status: [Completed]**
 
 ## Table of Contents 
-1) Project Obective & Description
-2) Methods Used
-3) Technologies
-4) Background and Motivation
+1) Project Obective
+2) Methods
+3) Technologies Used
+4) Data Exploration
 5) Data Exploration
 6) Hypothesis Testing
 7) Conclusions and Next Steps
 
-
-
 ## Project Objective
-I explored the relationship between social connectedness and COVID-19 spread. 
+In this projeect I explored the relationship between social connectedness and COVID-19 spread. Fascinated by social network analysis and awash with COVID-19 data, I found it an opportune time to explore whether any link exists between how connected U.S. counties are and their levels of COVID-19 cases per capita. 
 
 ### Hypothesis: 
-U.S. counties with greater social connectedness have higher rates of COVID-19 spread. 
+I hypothesized that U.S. counties with greater social connectedness have higher rates of COVID-19 spread. 
 
-### Methods Used
+### Methods
     - Exploratory Data Analysis
-    - Network Analysis
+    - Social Network Analysis, Graph Analysis
     - Geospacial Information Systems
     - Hypothesis Testing
 
-
-### Technologies 
-    - Python
-    - NetworkX
-    - GeoPandas
-    - SciPy
-    - NumPy
-    - Matplotlib
-    - Plotly
-    - Pandas
-
-## Background and Motivation
-I was curious about whether any relationship exists between county social connectedness and rates of COVID-19 spread. I'm particularly interested in social network analysis, and wanted to layer in COVID-19 spread to better understand if more socially connected counties have higher cases of COVID-19 per capita.
+### Technologies Used 
+![](images/6_technologies_used.001.jpeg "Distribution of log Social Connectedness Indicator")
 
 ## Data Exploration
-I used the Social Connectedness Indicator dataset from Facebook which contains county<>county connections along with a relative probability of an individual from those two counties being connected on Facebook, the Social Connectedness Indicator (SCI). Since the SCI ranges from 1 to 1 billion, I took the log transformation of the SCI to better enable visualizations.
+[Facebook Data For Good](https://dataforgood.fb.com/tools/social-connectedness-index/) publishes the Social Connectedness Indicator (SCI), a relative probability on whether individuals from two U.S. counties are friends on Facebook. The range of the SCI is between 1 and 1 billion. To better facilitate visualizing this dataset, I took the log transformation of the SCI and used throughout my analysis.
 
-Figure 1: Distribution of log SCI
+**Figure 1:** Distribution of log SCI Across U.S. Counties
 ![](images/0_log_SCI_distribution.png "Distribution of log Social Connectedness Indicator")
 
-To better understand this SCI dataset, I modeled each county-county pair across the United States, and used two contrasting examples to illustrate the difference in how one county's scores are different from another.
+Taking two U.S. counties, San Francisco County and Kern County as examples, the utility of the SCI dataset is evident in Figures 2 and 3. Figure 2 plots the SCI for each county connected to San Francisco County. Darker blue counties indicate a more likely friendship tie between an individual in that county and San Francisco County. Urban areas in the West, South, southern Florida, and the Northeast are more likely to have connections to individuals residing in San Francisco County.
 
-Figure 2 illustrates the Facebook connections to individuals living in San Francisco County. Quite noticeable is the density of connections in urban areas in the West including Seattle and Denver, Austin, Texas, Miami, and throughout the Northeast.
-
-Figure 2: County-County Connections to San Francisco County, California
+**Figure 2:** County-County Connections to San Francisco County, California
 ![](images/1_SF_county_SCI_map.png "Counties Connected to San Francisco County, CA")
 
+Contrast this with a more rural county in California, Kern County, which has more connections to more rural areas throughout the West, Southeast, and western Texas, shown in Figure 3.
 
-The difference is notable when compared to Figure 3, which illustrates the county connections to individuals living in Kern County, California, a more rural area than San Francisco County. Here, individuals in Kern County are more likely to be connected to people living in the West including Nevada, western Texas, across the Great Plains, and the Southeast.
-
-Figure 3: County-County Connections to Kern County, California
+**Figure 3:** County-County Connections to Kern County, California
 ![](images/2_Kern_county_SCI_map.png "Counties Connected to Kern County, CA")
 
-Taking the SCI dataset, I layered on a dataset of COVID-19 cases per capita and plotted network maps to illustrate the degree of COVID-19 across these county pairs. Figure 4 illustrates a sample of these connections, with each node scaled for the number of COVID-19 cases per capita. For the purposes of this project, I expected counties in this group to exhibit fewer COVID-19 cases per capita than a random sample drawn from the upper 25% group, Figure 5.
+With the SCI data, I layered on COVID-19 cases per capita and generated network graphs for two samples of counties - the lower 25% of SCI counties and the upper 25% of connected counties. I hypothesized that lower connected counties would have fewer COVID-19 cases per capita than higher-connected counties.
 
-Figure 4: Lower 25% of SCI counties, with nodes sized for COVID-19 cases per capita
+Figure 4 illustrates a sample of 2,000 county pairs with the lowest SCI. Each node is scaled for the number of COVID-19 cases per capita. The mean number of cases per capita of this sample is 4.5
+
+**Figure 4:** Lower 25% of SCI counties, with nodes sized for COVID-19 cases per capita
 ![](images/3_network_map_lower_25.png "Random Sample of 2000 Counties from Lower 25%")
 
-Interestingly, the average number of cases per capita in the upper 25% sample was fewer than the sample from the lower 25%. To dig into this more, I ran a hypothesis test.
+Figure 5 represents a sample of 2,000 county pairs with the highest SCI. Again, each node is scaled for the number of COVID-19 cases per capita. The mean cases per capita of this sample is 3.5.
 
-Figure 5: Upper 25% of SCI counties, with nodes sized for COVID-19 cases per capita
+
+Interestingly, the average number of cases per capita in the upper 25% sample is lower than the sample from the lower 25%. To further explore this observation, I performed a hypothesis test. 
+
+**Figure 5:** Upper 25% of SCI counties, with nodes sized for COVID-19 cases per capita
 ![](images/5_network_map_upper_25.png "Random Sample of 2000 Counties from Upper 25%")
 
 ## Hypothesis Testing
-I ran a two sample one-sided test that compared a sample from the lower 25% to the higher 25%. I hypothesized that counties with 
+I conducted a two sample, one-sided t-test that compared a sample of counties with the lowest SCI to a sample of counties with the highest SCI. The hypotheses were:
+
+![](images/7_hypothesis_testing.png "Random Sample of 2000 Counties from Upper 25%")
+
+![](images/8_results.png "Random Sample of 2000 Counties from Upper 25%")
+
+With a p-value less than the selected significance level of 0.05, I failed to reject the null hypothesis. These results ran counter to my initial expectation and hypothesis, but I believe there are two reasons why
 
 
 ## Conclusion and Next Steps
