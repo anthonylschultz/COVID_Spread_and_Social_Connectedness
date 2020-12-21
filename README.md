@@ -64,11 +64,16 @@ I conducted a two sample, one-sided t-test that compared a sample of counties wi
 
 ![](images/8_results.png "Random Sample of 2000 Counties from Upper 25%")
 
-With a p-value less than the selected significance level of 0.05, I failed to reject the null hypothesis. These results ran counter to my initial expectation and hypothesis, but I believe there are two reasons why
+With a p-value less than the selected significance level of 0.05, I failed to reject the null hypothesis. These results ran counter to my initial expectation and hypothesis, but a few reasons could explain the results.
 
 
-## Conclusion and Next Steps
+## Analysis
+### Why Might Higher Connected Countiese Have Fewer Infections per Capita?
+1) **We're too late in the pandemic to rely on social networks as disease vectors.** COVID-19 is far too widespread now to suggest that an individual's social network could help predict the direction of the disease. As of December 2020, we aree well past the point where an individual's personal connections are the main vector of disease spread. Analogous to this is the fact that contact tracing is essentially useless with the exception of smaller isolated settings like university campuses.
+2) **Demographic differences exist in higher connecteed counties** Research has demonstrated that higher connected counties, especially when connected to counties that are more than 100 miles away, have higher levels of income, education, and social mobility. It's also possible that such factors influence political and cultural leanings and therefore the degree to which individuals adhere to COVID-19 restrictions. 
 
+## Additional Study
+Moving forward, I would like to examine these data using a timeseries approach starting earlier in the pandemic when an individual's social network could have a greater influence on the direction of the disease. I would also like to examine these data cut by demographic variables including age, income, education levels, and political orientation using voting records. Doing so might offer a more nuanced understanding of the role network data can play in prediction how the social connections of a given county's residents might predict disease spread amongst the county population.
 
 ## Contact
 anthonyschultz@gmail.com
