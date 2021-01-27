@@ -7,12 +7,11 @@
 2) Methods
 3) Technologies Used
 4) Data Exploration
-5) Data Exploration
-6) Hypothesis Testing
-7) Conclusions and Next Steps
+5) Hypothesis Testing
+6) Conclusions and Next Steps
 
 ## Project Objective
-In this projeect I explored the relationship between social connectedness and COVID-19 spread. Fascinated by social network analysis and awash with COVID-19 data, I found it an opportune time to explore whether any link exists between how connected U.S. counties are and their levels of COVID-19 cases per capita. 
+Fascinated by social connectedness and curious about COVID-19 spread, I explored whether a link exists between U.S. counties' social connectedness and their incidence of COVID-19. I leveraged county-level social connectedness data and COVID-19 spread data to explore what relationship, if any, exists between the two.
 
 ### Hypothesis: 
 I hypothesized that U.S. counties with greater social connectedness have higher rates of COVID-19 spread. 
